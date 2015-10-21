@@ -1,0 +1,118 @@
+<html> 
+<head>
+<title>Cookie Click</title>
+</head>
+<body>
+<script language="JavaScript">
+<!--
+var cookie = 0;
+var MouseClickNumber = 1;
+var ObjectCreate = function (name, number, price, produceQuantitiy , timeInterval){
+	this.name = name;
+	this.number = number;
+	this.price = price;
+	this.produceQuantitiy = produceQuantitiy;
+	this.timeInterval = timeInterval;
+}
+ObjectCreate.prototype.setValueSource = function (form, button) {
+	this.form = form;
+	this.button = button;
+};
+ObjectCreate.prototype.setValueText = function (message) {
+	var sourcePath = "document." + this.form + "." + this.button + ".value";
+	var execStr = sourcePath + "=" + "\"" + message + "\"" +";"; 
+	eval(execStr);
+};
+ObjectCreate.prototype.buy = function (){
+	if(cookie >= this.price){
+		cookie -= this.price;
+		cookie = cookie.toFixed(0);
+		this.price *= 1.1;
+		this.price = this.price.toFixed(0);
+		this.number++;
+		click(this.produceQuantitiy,this.timeInterval);
+	}
+};
+function click(quantitiy,timeInterval){
+	cookie = parseInt(cookie) + quantitiy;
+	form1.cookie.value = cookie;
+	timer = setTimeout("click(" + quantitiy + "," + timeInterval + ")",timeInterval);
+}
+
+function cookieClick(){
+	cookie += parseInt(MouseClickNumber);
+	form1.cookie.value = cookie;
+}
+var Finger = new ObjectCreate ("Finger", 0, 10, 1, 1000);
+function fingerClick(form, button){
+	Finger.setValueSource(form, button);
+	Finger.buy();
+	var message =  "Buy Auto Finger Cost: " + Finger.price + "\\nYou Have " + Finger.number + " Fingers";
+	Finger.setValueText(message);
+}
+var Grandmother = new ObjectCreate ("Grandmother", 0, 50, 3, 1000);
+function grandmotherClick(form, button){
+	Grandmother.setValueSource(form, button);
+	Grandmother.buy();
+	var message =  "Buy Grandmother Cost: " + Grandmother.price + "\\nYou Have " + Grandmother.number + " Grandmothers";
+	Grandmother.setValueText(message);
+}
+var Farm = new ObjectCreate ("Farm", 0, 100, 5, 1000);
+function farmClick(form, button){
+	Farm.setValueSource(form, button);
+	Farm.buy();
+	var message =  "Buy Farm Cost: " + Farm.price + "\\nYou Have " + Farm.number + " Farms";
+	Farm.setValueText(message);
+}
+var Fatory = new ObjectCreate ("Fatoty", 0, 300, 10, 1000);
+function fatoryClick(form, button){
+	Fatory.setValueSource(form, button);
+	Fatory.buy();
+	var message =  "Buy Fatory Cost: " + Fatory.price + "\\nYou Have " + Fatory.number + " Fatorys";
+	Fatory.setValueText(message);
+}
+var Boat = new ObjectCreate ("Boat", 0, 500, 15, 1000);
+function boatClick(form, button){
+	Boat.setValueSource(form, button);
+	Boat.buy();
+	var message =  "Buy Boat Cost: " + Boat.price + "\\nYou Have " + Boat.number + " Boats";
+	Boat.setValueText(message);
+}
+var Portal = new ObjectCreate ("Portal", 0, 1000, 30, 1000);
+function portalClick(form, button){
+	Portal.setValueSource(form, button);
+	Portal.buy();
+	var message =  "Buy Portal Cost: " + Portal.price + "\\nYou Have " + Portal.number + " Portals";
+	Portal.setValueText(message);
+}
+function buyDoubleClick(){
+	if (cookie >= 100){
+		cookie -= 100;
+		MouseClickNumber = 2;
+		form3.Skillbt1.style.display = "none";
+	}
+}
+//-->
+</script>
+<noscript>
+Please Enable your JavaScript
+</noscript>
+<h2>Cookie</h2><form name="form1">
+	<input type="text" name="cookie" value="0">
+</form>
+<form name="form2">
+	<input type="button" name="bt1" value="Click Cookie" onClick=cookieClick()>
+	<input type="button" name="bt2" value="Buy Auto Finger Cost : 10" onClick=fingerClick("form2","bt2")>
+	<input type="button" name="bt3" value="Buy Grandmother Cost : 50" onClick=grandmotherClick("form2","bt3")>
+	<input type="button" name="bt4" value="Buy Farm Cost : 100" onClick=farmClick("form2","bt4")>
+	<input type="button" name="bt5" value="Buy factory Cost : 300" onClick=fatoryClick("form2","bt5")>
+	<input type="button" name="bt6" value="Buy Boat Cost : 500" onClick=boatClick("form2","bt6")>
+	<input type="button" name="bt7" value="Buy Portal Cost : 1000" onClick=portalClick("form2","bt7")>
+</form>
+<h2>Skill</h2>
+<form name="form3">
+	<input type="button" name="Skillbt1" value="Buy Double Click Cost : 100" onClick=buyDoubleClick()>
+</form>
+
+</body>
+</html>

@@ -1,0 +1,118 @@
+<html> 
+<head>
+<title>Java Script Test</title>
+</head>
+<body>
+<h2>HTML line</h2>
+<script language="JavaScript">
+<!--
+var winvar;
+var dw = document.write;
+var name = "MA IN 9";
+var array1 = new Array ("deepElement1","deepElement2","deepElement3");
+var array2 = new Array ("deepElement4","deepElement5");
+var array = new Array (array1,array2,"element1");
+print("gg3:0");
+print(getGlobalName());
+print(getLocalName());
+printArray(array1);
+setGlobalName("gold knife");
+print(getGlobalName());
+printArray(array);
+print(new Date());
+print(new Date(2000,2,2,3,4,5));
+var date = new Date();
+print(date.getYear());
+print(date.getTime());
+print(date.getTimezoneOffset());
+print(Date.UTC(2000, 2, 2))
+
+
+function getGlobalName(){
+	return name;
+}
+
+function setGlobalName(name){
+	this.name = name;
+}
+
+function getLocalName(){
+	var name = "Ma 9 9 ";
+	return name;
+}
+
+function print(input){
+	document.write(input+"<br>");
+}
+
+function btClickAlert(){
+	alert("Nuclear is launch \n you done");
+	alert("RRRRRRRRRRRRRRRRR");
+}
+
+function btclick2(value){
+	form1.name1.value=value;
+}
+
+function printArray(array){
+	for(i=0;i<array.length;i++){
+		print(array[i]);
+	}
+}
+
+function btClickConfirm(message){
+	confirm(message);
+}
+
+function btClickPrompt(){
+	prompt("aaaa\"","");
+}
+
+function btClickWindowOpen(){
+	winvar = window.open("http://www.google.com","googleeeeeeeeeee","location,menubar=0 status,toolbar,scrollbars=0");
+}
+
+function btClickWindowClose(){
+	winvar.close();
+}
+var i2 = 0;
+var timer;
+function count(){
+	window.status = i2;
+	i2++;
+	timer = setTimeout("count()",1000);
+}
+//setTimeout("alert('5 senconds')",5000)
+//-->
+</script>
+<noscript>
+Please Enable your JavaScript
+</noscript>
+<h2>HTML line</h2>
+<form name="form1">
+	<input type="text" name="name1" value="you mom too fat, very fat , even earth can't live her">
+</form>
+<form name="form2">
+	<input type="button" name="bt1" value="Alert" onClick=btClickAlert()>
+	<input type="button" name="bt2" value="Confirm" onClick=btClickConfirm("G123123123")>
+	<input type="button" name="bt3" value="Prompt" onClick=btClickPrompt()>
+	<input type="button" name="bt4" value="WindowOpen" onClick=btClickWindowOpen()>
+	<input type="button" name="bt5" value="WindowClose" onClick=btClickWindowClose()>
+	<input type="button" name="bt6" value="StartTimer" onClick=count()>
+	<input type="button" name="bt7" value="StopTimer" onClick=clearTimeout(timer)>
+</form>
+
+<h2>Change your text<h2>
+<form name="form3">
+	<input type="text" name="textBar" value="">
+</form>
+<form name="form4">
+	<input type="button" name="bt2" value="click me ^^" onClick=btclick2(form3.textBar.value)>
+</form>
+<a href="index.html"
+onMouseOver="window.status='Mouse pointer is over a link';return true"
+onMouseOut="window.status='Mouse pointer is Moved out';">
+fkkkkkkkkkkkkkkkkk.
+</a>
+</body>
+</html>
