@@ -12,6 +12,13 @@ just syntax practice
 
 [基本語法練習](http://liaoleon.github.io/jsTest/javascript.html)
 
+test image on base64
+
+[圖片以base64儲存](http://liaoleon.github.io/jsTest/imgbase64.html)
+不用http request 可以擋驗證碼機器人  太神啦!!
+
+no http request, Prevent Bot , too god~!!!
+
 *求英文教學*
 
 _plase help my english._
