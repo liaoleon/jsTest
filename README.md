@@ -1,5 +1,5 @@
-# jsTest
-js Practice
+# JavaScriptTest
+JavaScript Practice
 
 view Test of web
 
