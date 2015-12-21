@@ -19,6 +19,9 @@ test image on base64
 
 no http request, Prevent Bot , too god~!!!
 
+[元素表](http://liaoleon.github.io/jsTest/periodicTable.html)
+練習資料存放方法
+
 *求英文教學*
 
 _plase help my english._
