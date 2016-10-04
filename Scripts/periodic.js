@@ -148,7 +148,7 @@ jQuery(document).ready(function () {
 	main();
 
 	$("#sortable").sortable({
-		containment : 'parent',
+		//containment : 'parent',
 		revert : true,
 		handle : $(".Element"),
 	});
