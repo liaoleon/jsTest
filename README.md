@@ -22,6 +22,9 @@ no http request, Prevent Bot , too god~!!!
 [元素表](http://liaoleon.github.io/jsTest/periodicTable.html)
 練習資料存放方法
 
+[Jcrop](http://liaoleon.github.io/jsTest/jcrop.html)
+練習圖片上傳(local)並提供框選功能
+
 *求英文教學*
 
 _plase help my english._
